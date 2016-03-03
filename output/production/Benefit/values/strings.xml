@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">优惠大全</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- main header string -->
+    <string name="main_menu_login">LOGIN</string>
+    <string name="main_menu_logout">LOGOUT</string>
+    <string name="main_menu_set_pass">SET PASSWORD</string>
+    <string name="header_home_text">SMART HOME</string>
+    <string name="header_device_text">DEVICE LIST</string>
+    <string name="header_plan_text">PANEL</string>
+    <string name="header_btn_add_text">ADD</string>
+    <string name="header_btn_setting_text">SETTING</string>
+    <string name="main_menu_exit">EXIT</string>
+    <string name="main_menu_about">ABOUT US</string>
+    <string name="app_on_network">NO NETWORK</string>
+    <string name="network_not_connected">网络连接失败，请检查网络设置</string>
+    <string name="xml_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    <string name="http_exception_error">网络异常，请求超时</string>
+    <string name="socket_exception_error">网络异常，读取数据超时</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+    <string name="app_menu_surelogout">Are you sure to logout?</string>
+    <string name="app_menu_sureupgrade">Are you sure to logout?</string>
+    <string name="app_menu_sureremove">Are you sure to remove?</string>
+    <string name="app_menu_sureexit">Are you sure to exit?</string>
+    <string name="app_menu_sureresetpass">Are you sure to reset password?</string>
+    <string name="sure">YES</string>
+    <string name="cancle">CANCEL</string>
+    <string name="title_activity_show">ShowActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
