@@ -58,15 +58,15 @@ public class StringUtils
 		String ftime = "";
 		Calendar cal = Calendar.getInstance();
 		
-		//判断是否是同�?�?
+		//判断是否是同
 		String curDate = dateFormater2.get().format(cal.getTime());
 		String paramDate = dateFormater2.get().format(time);
 		if(curDate.equals(paramDate)){
 			int hour = (int)((cal.getTimeInMillis() - time.getTime())/3600000);
 			if(hour == 0)
-				ftime = Math.max((cal.getTimeInMillis() - time.getTime()) / 60000,1)+"分钟�?";
+				ftime = Math.max((cal.getTimeInMillis() - time.getTime()) / 60000,1)+"分钟";
 			else 
-				ftime = hour+"小时�?";
+				ftime = hour+"小时";
 			return ftime;
 		}
 		
@@ -76,9 +76,9 @@ public class StringUtils
 		if(days == 0){
 			int hour = (int)((cal.getTimeInMillis() - time.getTime())/3600000);
 			if(hour == 0)
-				ftime = Math.max((cal.getTimeInMillis() - time.getTime()) / 60000,1)+"分钟�?";
+				ftime = Math.max((cal.getTimeInMillis() - time.getTime()) / 60000,1)+"分钟";
 			else 
-				ftime = hour+"小时�?";
+				ftime = hour+"小时";
 		}
 		else if(days == 1){
 			ftime = "昨天";
@@ -115,7 +115,7 @@ public class StringUtils
 	}
 	
 	/**
-	 * 判断给定字符串是否空白串�?
+	 * 判断给定字符串是否空白串
 	 * 空白串是指由空格、制表符、回车符、换行符组成的字符串
 	 * 若输入字符串为null或空字符串，返回true
 	 * @param input
@@ -160,7 +160,7 @@ public class StringUtils
 		return defValue;
 	}
 	/**
-	 * 对象转整�?
+	 * 对象转整
 	 * @param obj
 	 * @return 转换异常返回 0
 	 */
@@ -169,7 +169,7 @@ public class StringUtils
 		return toInt(obj.toString(),0);
 	}
 	/**
-	 * 对象转整�?
+	 * 对象转整
 	 * @param obj
 	 * @return 转换异常返回 0
 	 */
@@ -180,7 +180,7 @@ public class StringUtils
 		return 0;
 	}
 	/**
-	 * 字符串转布尔�?
+	 * 字符串转布尔
 	 * @param b
 	 * @return 转换异常返回 false
 	 */

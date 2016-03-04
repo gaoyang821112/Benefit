@@ -27,7 +27,7 @@ import android.util.Xml;
 import com.gaoyang.common.StringUtils;
 
 /**
- * 文件操作工具�?
+ * 文件操作工具
  * 
  * @author liux (http://my.oschina.net/liux)
  * @version 1.0
@@ -110,7 +110,7 @@ public class FileUtils {
 	}
 	
     /**
-	 * 写文本文�? 在Android系统中，文件保存�? /data/data/PACKAGE_NAME/files 目录�?
+	 * 写文本文在Android系统中，文件保存 /data/data/PACKAGE_NAME/files 目录
 	 * 
 	 * @param context
 	 * @param msg
@@ -260,7 +260,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 根据文件绝对路径获取文件�?
+	 * 根据文件绝对路径获取文件
 	 * 
 	 * @param filePath
 	 * @return
@@ -272,7 +272,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 根据文件的绝对路径获取文件名但不包含扩展�?
+	 * 根据文件的绝对路径获取文件名但不包含扩展
 	 * 
 	 * @param filePath
 	 * @return
@@ -287,7 +287,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 获取文件扩展�?
+	 * 获取文件扩展
 	 * 
 	 * @param fileName
 	 * @return
@@ -413,7 +413,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * �?查文件是否存�?
+	 * 查文件是否存
 	 * 
 	 * @param name
 	 * @return
@@ -431,7 +431,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * �?查路径是否存�?
+	 * 查路径是否存
 	 * 
 	 * @param path
 	 * @return
@@ -443,7 +443,7 @@ public class FileUtils {
 	/**
 	 * 计算SD卡的剩余空间
 	 * 
-	 * @return 返回-1，说明没有安装sd�?
+	 * @return 返回-1，说明没有安装sd
 	 */
 	public static long getFreeDiskSpace() {
 		String status = Environment.getExternalStorageState();
@@ -483,7 +483,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * �?查是否安装SD�?
+	 * 查是否安装SD
 	 * 
 	 * @return
 	 */
@@ -498,7 +498,7 @@ public class FileUtils {
 	}
 	
 	/**
-	 * �?查是否安装外置的SD�?
+	 * 查是否安装外置的SD
 	 * 
 	 * @return
 	 */
@@ -509,7 +509,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 删除目录(包括：目录里的所有文�?)
+	 * 删除目录(包括：目录里的所有文)
 	 * 
 	 * @param fileName
 	 * @return
@@ -580,9 +580,9 @@ public class FileUtils {
 	}
 
 	/**
-	 * 删除空目�?
+	 * 删除空目
 	 * 
-	 * 返回 0代表成功 ,1 代表没有删除权限, 2代表不是空目�?,3 代表未知错误
+	 * 返回 0代表成功 ,1 代表没有删除权限, 2代表不是空目,3 代表未知错误
 	 * 
 	 * @return
 	 */
@@ -601,7 +601,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 重命�?
+	 * 重命
 	 * 
 	 * @param oldName
 	 * @param newName
@@ -630,7 +630,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 获取SD卡的根目�?
+	 * 获取SD卡的根目
 	 * 
 	 * @return
 	 */
@@ -640,7 +640,7 @@ public class FileUtils {
 	}
 	
 	/**
-	 * 获取手机外置SD卡的根目�?
+	 * 获取手机外置SD卡的根目
 	 * 
 	 * @return
 	 */
@@ -662,7 +662,7 @@ public class FileUtils {
 		SecurityManager checker = new SecurityManager();
 		File path = new File(root);
 		checker.checkRead(root);
-		// 过滤掉以.�?始的文件�?
+		// 过滤掉以.始的文件
 		if (path.isDirectory()) {
 			for (File f : path.listFiles()) {
 				if (f.isDirectory() && !f.getName().startsWith(".")) {
@@ -695,7 +695,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * 截取路径�?
+	 * 截取路径
 	 * 
 	 * @return
 	 */

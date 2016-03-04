@@ -12,7 +12,7 @@ import android.os.Environment;
 import android.preference.PreferenceManager;
 
 /**
- * 应用程序配置类：用于保存用户相关信息及设�?
+ * 应用程序配置类：用于保存用户相关信息及设
  * 
  * @author liux (http://my.oschina.net/liux)
  * @version 1.0
@@ -130,10 +130,10 @@ public class AppConfig {
 	private void setProps(Properties p) {
 		FileOutputStream fos = null;
 		try {
-			// 把config建在files目录�?
+			// 把config建在files目录
 			// fos = activity.openFileOutput(APP_CONFIG, Context.MODE_PRIVATE);
 
-			// 把config建在(自定�?)app_config的目录下
+			// 把config建在(自定)app_config的目录下
 			File dirConf = mContext.getDir(APP_CONFIG, Context.MODE_PRIVATE);
 			File conf = new File(dirConf, APP_CONFIG);
 			fos = new FileOutputStream(conf);

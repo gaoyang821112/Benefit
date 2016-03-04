@@ -21,10 +21,10 @@ public class WifiAdmin {
 	private List<ScanResult> mWifiList;
 	// 网络连接列表
 	private List<WifiConfiguration> mWifiConfiguration;
-	// 定义�?个WifiLock
+	// 定义个WifiLock
 	WifiLock mWifiLock;
 
-	// 构�?�器
+	// 构器
 	public WifiAdmin(Context context) {
 		// 取得WifiManager对象
 		mWifiManager = (WifiManager) context
@@ -48,20 +48,20 @@ public class WifiAdmin {
 		}
 	}
 
-	// 锁定WifiLock，当下载大文件时�?要锁�?
+	// 锁定WifiLock，当下载大文件时要锁
 	public void AcquireWifiLock() {
 		mWifiLock.acquire();
 	}
 
 	// 解锁WifiLock
 	public void ReleaseWifiLock() {
-		// 判断时�?�锁�?
+		// 判断时锁
 		if (mWifiLock.isHeld()) {
 			mWifiLock.acquire();
 		}
 	}
 
-	// 创建�?个WifiLock
+	// 创建个WifiLock
 	public void CreatWifiLock() {
 		mWifiLock = mWifiManager.createWifiLock("Test");
 	}
@@ -77,7 +77,7 @@ public class WifiAdmin {
 		if (index > mWifiConfiguration.size()) {
 			return;
 		}
-		// 连接配置好的指定ID的网�?
+		// 连接配置好的指定ID的网
 		mWifiManager.enableNetwork(mWifiConfiguration.get(index).networkId,
 				true);
 	}
@@ -101,7 +101,7 @@ public class WifiAdmin {
 		for (int i = 0; i < mWifiList.size(); i++) {
 			stringBuilder
 					.append("Index_" + new Integer(i + 1).toString() + ":");
-			// 将ScanResult信息转换成一个字符串�?
+			// 将ScanResult信息转换成一个字符串
 			// 其中把包括：BSSID、SSID、capabilities、frequency、level
 			stringBuilder.append((mWifiList.get(i)).toString());
 			stringBuilder.append("\n");
@@ -139,13 +139,13 @@ public class WifiAdmin {
 		return (mWifiInfo == null) ? "NULL" : mWifiInfo.toString();
 	}
 
-	// 添加�?个网络并连接
+	// 添加个网络并连接
 	public void AddNetwork(WifiConfiguration wcg) {
 		int wcgID = mWifiManager.addNetwork(wcg);
 		mWifiManager.enableNetwork(wcgID, true);
 	}
 
-	// 断开指定ID的网�?
+	// 断开指定ID的网
 	public void DisconnectWifi(int netId) {
 		mWifiManager.disableNetwork(netId);
 		mWifiManager.disconnect();
@@ -222,7 +222,7 @@ public class WifiAdmin {
 		WIFICIPHER_WEP, WIFICIPHER_WPA, WIFICIPHER_NOPASS, WIFICIPHER_INVALID
 	}
 
-	// 提供�?个外部接口，传入要连接的无线�?
+	// 提供个外部接口，传入要连接的无线
 	public void connect(String ssid, String password, WifiCipherType type) {
 		Thread thread = new Thread(new ConnectRunnable(ssid, password, type));
 		thread.start();
@@ -279,7 +279,7 @@ public class WifiAdmin {
 			config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
 			config.allowedPairwiseCiphers
 					.set(WifiConfiguration.PairwiseCipher.TKIP);
-			// 此处�?要修改否则不能自动重�?
+			// 此处要修改否则不能自动重
 			// config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
 			config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
 			config.allowedPairwiseCiphers
@@ -315,11 +315,11 @@ public class WifiAdmin {
 		public void run() {
 			// 打开wifi
 			openWifi();
-			// �?启wifi功能�?要一段时�?(我在手机上测试一般需�?1-3秒左�?)，所以要等到wifi
-			// 状�?�变成WIFI_STATE_ENABLED的时候才能执行下面的语句
+			// 启wifi功能要一段时(我在手机上测试一般需1-3秒左)，所以要等到wifi
+			// 状变成WIFI_STATE_ENABLED的时候才能执行下面的语句
 			while (mWifiManager.getWifiState() == WifiManager.WIFI_STATE_ENABLING) {
 				try {
-					// 为了避免程序�?直while循环，让它睡�?100毫秒�?测�?��??
+					// 为了避免程序直while循环，让它睡100毫秒测?
 					Thread.sleep(100);
 				} catch (InterruptedException ie) {
 				}

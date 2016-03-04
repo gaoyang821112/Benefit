@@ -7,7 +7,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 
 /**
- * 应用程序Activity管理类：用于Activity管理和应用程序�??�?
+ * 应用程序Activity管理类：用于Activity管理和应用程序?
  * @author liux (http://my.oschina.net/liux)
  * @version 1.0
  * @created 2012-3-21
@@ -28,7 +28,7 @@ public class AppManager {
 		return instance;
 	}
 	/**
-	 * 添加Activity到堆�?
+	 * 添加Activity到堆
 	 */
 	public void addActivity(Activity activity){
 		if(activityStack==null){
@@ -37,14 +37,14 @@ public class AppManager {
 		activityStack.add(activity);
 	}
 	/**
-	 * 获取当前Activity（堆栈中�?后一个压入的�?
+	 * 获取当前Activity（堆栈中后一个压入的
 	 */
 	public Activity currentActivity(){
 		Activity activity=activityStack.lastElement();
 		return activity;
 	}
 	/**
-	 * 结束当前Activity（堆栈中�?后一个压入的�?
+	 * 结束当前Activity（堆栈中后一个压入的
 	 */
 	public void finishActivity(){
 		Activity activity=activityStack.lastElement();
@@ -72,7 +72,7 @@ public class AppManager {
 	}
 
 	/**
-	 * �?出应用程�?
+	 * 出应用程
 	 */
 	public void AppExit(Context context) {
 		try {

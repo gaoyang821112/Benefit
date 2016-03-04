@@ -16,7 +16,7 @@ public class PropertiesUtils {
 	}
 	
 	/**
-	 * 获得Spring框架应用上下文对�?
+	 * 获得Spring框架应用上下文对
 	 * 
 	 * @return ApplicationContext
 	 */

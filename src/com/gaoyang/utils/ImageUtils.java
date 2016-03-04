@@ -40,7 +40,7 @@ import android.util.DisplayMetrics;
 import com.gaoyang.common.MethodsCompat;
 
 /**
- * 图片操作工具�?
+ * 图片操作工具
  * 
  * @author liux (http://my.oschina.net/liux)
  * @version 1.0
@@ -59,7 +59,7 @@ public class ImageUtils {
 	public static final int REQUEST_CODE_GETIMAGE_BYCROP = 2;
 
 	/**
-	 * 写图片文�? 在Android系统中，文件保存�? /data/data/PACKAGE_NAME/files 目录�?
+	 * 写图片文 在Android系统中，文件保存 /data/data/PACKAGE_NAME/files 目录
 	 * 
 	 * @throws IOException
 	 */
@@ -83,7 +83,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 写图片文件到SD�?
+	 * 写图片文件到SD
 	 * 
 	 * @throws IOException
 	 */
@@ -107,7 +107,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 让Gallery上能马上看到该图�?
+	 * 让Gallery上能马上看到该图
 	 */
 	private static void scanPhoto(Context ctx, String imgFileName) {
 		Intent mediaScanIntent = new Intent(
@@ -201,7 +201,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 使用当前时间戳拼接一个唯�?的文件名
+	 * 使用当前时间戳拼接一个唯的文件名
 	 * 
 	 * @param format
 	 * @return
@@ -224,7 +224,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 判断当前Url是否标准的content://样式，如果不是，则返回绝对路�?
+	 * 判断当前Url是否标准的content://样式，如果不是，则返回绝对路
 	 * 
 	 * @param uri
 	 * @return
@@ -249,7 +249,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 通过uri获取文件的绝对路�?
+	 * 通过uri获取文件的绝对路
 	 * 
 	 * @param uri
 	 * @return
@@ -275,7 +275,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 获取图片缩略�? 只有Android2.1以上版本支持
+	 * 获取图片缩略 只有Android2.1以上版本支持
 	 * 
 	 * @param imgName
 	 * @param kind
@@ -310,7 +310,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 获取SD卡中�?新图片路�?
+	 * 获取SD卡中新图片路
 	 * 
 	 * @return
 	 */
@@ -335,7 +335,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 计算缩放图片的宽�?
+	 * 计算缩放图片的宽
 	 * 
 	 * @param img_size
 	 * @param square_size
@@ -351,13 +351,13 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 创建缩略�?
+	 * 创建缩略
 	 * 
 	 * @param context
 	 * @param largeImagePath
 	 *            原始大图路径
 	 * @param thumbfilePath
-	 *            输出缩略图路�?
+	 *            输出缩略图路
 	 * @param square_size
 	 *            输出图片宽度
 	 * @param quality
@@ -375,7 +375,7 @@ public class ImageUtils {
 		if (cur_bitmap == null)
 			return;
 
-		// 原始图片的高�?
+		// 原始图片的高
 		int[] cur_img_size = new int[] { cur_bitmap.getWidth(),
 				cur_bitmap.getHeight() };
 		// 计算原始图片缩放后的宽高
@@ -414,7 +414,7 @@ public class ImageUtils {
 		// 获取这个图片的宽和高
 		int width = bitmap.getWidth();
 		int height = bitmap.getHeight();
-		// 定义预转换成的图片的宽度和高�?
+		// 定义预转换成的图片的宽度和高
 		int newWidth = 200;
 		int newHeight = 200;
 		// 计算缩放率，新尺寸除原始尺寸
@@ -505,11 +505,11 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 获得圆角图片的方�?
+	 * 获得圆角图片的方
 	 * 
 	 * @param bitmap
 	 * @param roundPx
-	 *            �?般设�?14
+	 *            般设14
 	 * @return
 	 */
 	public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
@@ -535,7 +535,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 获得带�?�影的图片方�?
+	 * 获得带影的图片方
 	 * 
 	 * @param bitmap
 	 * @return
@@ -614,7 +614,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 获取图片的类型信�?
+	 * 获取图片的类型信
 	 * 
 	 * @param in
 	 * @return
@@ -634,7 +634,7 @@ public class ImageUtils {
 	}
 
 	/**
-	 * 获取图片的类型信�?
+	 * 获取图片的类型信
 	 * 
 	 * @param bytes
 	 *            2~8 byte at beginning of the image file

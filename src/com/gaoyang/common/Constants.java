@@ -23,32 +23,32 @@ public final class Constants {
 	public static final String SUCCESS_CODE = "200";
 	
 	/**
-	 * Messsge what 属�?��??-- 成功
+	 * Messsge what 属-- 成功
 	 */
 	public static final int MSG_WHAT_SUCCESS = 1;
 	/**
-	 * Messsge what 属�?��??-- 失败
+	 * Messsge what 属-- 失败
 	 */
 	public static final int MSG_WHAT_FAIL = 2;
 	/**
-	 * Messsge what 属�?��??-- 异常
+	 * Messsge what 属-- 异常
 	 */
 	public static final int MSG_WHAT_EXCEPTION = 3;
 	/**
-	 * Messsge what 属�?��??-- 无网络链�?
+	 * Messsge what 属-- 无网络链
 	 */
 	public static final int MSG_WHAT_NOT_NETWORK = 4;
 	
 	/**
-	 * 访问网络时返回�?�状态码节点
+	 * 访问网络时返回状态码节点
 	 */
 	public static final String RESPONSE_CODE_NODE = "resCode" ;
 	/**
-	 * 访问网络时返回�?�对象节�?
+	 * 访问网络时返回对象节
 	 */
 	public static final String RESPONSE_DATA_NODE = "resData" ;
 	/**
-	 * 访问网络时返回�?�信息描述节�?
+	 * 访问网络时返回信息描述节
 	 */
 	public static final String RESPONSE_MSG_NODE = "msg" ;
 	/**
@@ -69,11 +69,11 @@ public final class Constants {
 	 */
 	public final static String DEVICE_CMD_COLOR = "COLOR";
 	/**
-	 * 灯打�?命令
+	 * 灯打命令
 	 */
 	public final static String DEVICE_CMD_ON = "ON";
 	/**
-	 * 灯关闭命�?
+	 * 灯关闭命
 	 */
 	public final static String DEVICE_CMD_OFF = "OFF";
 	
@@ -87,7 +87,7 @@ public final class Constants {
 	 */
 	public final static String BATTERY_NOR = "NOR" ;
 	/**
-	 * 电量-�?
+	 * 电量-
 	 */
 	public final static String BATTERY_LOW = "LOW";
 }

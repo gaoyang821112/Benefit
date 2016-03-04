@@ -167,13 +167,12 @@ public class MainActivity extends BaseActivity {
 		String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
 		JSONObject obj = null;
 		int totalPage = 1;
-		try {
-			obj = new JSONObject(result);
-			totalPage = Integer.parseInt(obj.getString("totalPages"));
-		} catch (JSONException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//		try {
+//			obj = new JSONObject(result);
+//			totalPage = Integer.parseInt(obj.getString("totalPages"));
+//		} catch (JSONException e1) {
+//			e1.printStackTrace();
+//		}
 		try {
 			for (int i = 0; i < totalPage; i++) {
 				Map params1 = new HashMap();
