@@ -33,8 +33,8 @@ public class MyRunnable implements Runnable {
 	}
 
 	public String postZSYH() throws Exception{
-		String orderUrl = API_URL.ZSYH.CREATE_ORDER_URL;
-		String result = HttpUtils.postUrl4ZSYH(orderUrl + requestUrl, params, context);
+		String orderUrl = API_URL.ZSYH_ADDRESS + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL3;
+		String result = HttpUtils.postUrl4ZSYH(orderUrl, params, context);
 		return result;
 	}
 	
@@ -45,10 +45,12 @@ public class MyRunnable implements Runnable {
 				Message msg = Message.obtain();
 				msg.what = 1;
 				try{
-					String returnUrl = postZSYHNew();
+//					String returnUrl = postZSYHNew();
+					//老活动
+					String returnUrl = postZSYH();
 					String str = "用户名:" + logParams.get("userName") + " 商品：" + logParams.get("productName") + " 返回参数：" + returnUrl;
 					msg.obj = str;
-					Thread.sleep(10);
+					Thread.sleep(1000);
 				}catch(Exception ex){
 					msg.what = 0 ;
 					msg.obj = ex.getMessage();

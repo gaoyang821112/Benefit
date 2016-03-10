@@ -39,7 +39,7 @@ public class ShowActivity extends Activity {
 	boolean flag = true;
 	
 	//1 九积分 2 周三五折 3 老活动
-	String QIANG_TYPE = "1";
+	String QIANG_TYPE = "3";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +102,7 @@ public class ShowActivity extends Activity {
 				params.put("quantity", "1");
 				params.put("userId", userId);
 				params.put("productId", productArray[j].split("-")[1]);
-				
+
 				HashMap localHashMap = new HashMap();
 				if (QIANG_TYPE.equals("1")) {
 					//九积分参数
@@ -149,15 +149,30 @@ public class ShowActivity extends Activity {
 					exec.execute(runner);
 				} else if (QIANG_TYPE.equals("3")) {
 					//国庆参数
-					params.put("orderAmount", "0");
-					localHashMap.put("orderAmount", "0");
-					params.put("orderCardType", "7");
-					localHashMap.put("orderCardType", "7");
 					localHashMap.put("quantity", "1");
-			        localHashMap.put("productId", productArray[j].split("-")[1]);
-			        localHashMap.put("userId", userId);
-			        String str1 = ValidateUtils.a(localHashMap, "asc");
-			        String mac = "";
+					localHashMap.put("userId", userId);
+					localHashMap.put("orderCardType", "7");
+					localHashMap.put("productId", "0143000005749");
+					localHashMap.put("orderPoint", "9");
+					params.put("quantity", "1");
+					params.put("userId", userId);
+					params.put("orderCardType", "7");
+					params.put("productId", "0143000005749");
+					params.put("orderPoint", "9");
+					params.put("p0", "a");
+					params.put("p1", "38");
+					params.put("p2", "meizu");
+					params.put("p3", "522e29c023924b379e53df1bf555587c8");
+					params.put("p4", "6a6f20e5ec6b44ceb2cbb8a0586ea170");
+					params.put("p5", userId);
+					params.put("p6", "484577745");
+					params.put("p7", "928817042e334b46b5322d21277da205");
+					params.put("p8", "ce8f81db64cc44f7ba6832b5bab64034");
+					params.put("p9", "null");
+					params.put("p10", "f4b21ca7cf954307b0d203c1166b5ced");
+
+					String str1 = ValidateUtils.a(localHashMap, "asc");
+					String mac = "";
 					try {
 						mac = ValidateUtils.b(str1 + "0102030405060708");
 					} catch (NoSuchAlgorithmException e) {
@@ -166,13 +181,11 @@ public class ShowActivity extends Activity {
 					params.put("mac", mac);
 					
 					Map<String, String> logParams = new HashMap<String, String>();
-					logParams.put("userName", userArray[i]);
-					logParams.put("productName", productArray[j].split("-")[0]);
+					logParams.put("userName", userId);
+					logParams.put("productName", "0143000005749");
 					MyRunnable runner = new MyRunnable(context, data_handler, urlStr, params, logParams);
 					exec.execute(runner);
 				}
-				
-		        
 			}
 		}
 	}
