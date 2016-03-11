@@ -26,7 +26,12 @@ public class API_URL {
 		 * 创建订单2
 		 */
 		public static final String PRODUCT_9POINT_LIST_URL2 = "yummy-portal/JSONServer/execute.do";
-		
+
+		/**
+		 * 创建订单3
+		 */
+		public static final String PRODUCT_9POINT_LIST_URL3 = "createOrderV5.json";
+
 		
 	}
 	
