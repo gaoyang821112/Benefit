@@ -124,7 +124,8 @@ public class ShowActivity extends Activity {
                     Map<String, String> logParams = new HashMap<String, String>();
                     logParams.put("userName", userArray[i]);
                     logParams.put("productName", productArray[j].split("-")[0]);
-                    MyRunnable runner = new MyRunnable(context, data_handler, urlStr, params, logParams);
+                    logParams.put("type", QIANG_TYPE);
+                    MyRunnable runner = new MyRunnable(context, data_handler, params, logParams);
                     exec.execute(runner);
                 } else if (QIANG_TYPE.equals("2")) {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
@@ -145,7 +146,8 @@ public class ShowActivity extends Activity {
                     Map<String, String> logParams = new HashMap<String, String>();
                     logParams.put("userName", userArray[i]);
                     logParams.put("productName", productArray[j].split("-")[0]);
-                    MyRunnable runner = new MyRunnable(context, data_handler, urlStr, params, logParams);
+                    logParams.put("type", QIANG_TYPE);
+                    MyRunnable runner = new MyRunnable(context, data_handler, params, logParams);
                     exec.execute(runner);
                 } else if (QIANG_TYPE.equals("3")) {
                     //国庆参数
@@ -163,13 +165,13 @@ public class ShowActivity extends Activity {
                     params.put("p1", "38");
                     params.put("p2", "meizu");
                     params.put("p3", "522e29c023924b379e53df1bf555587c8");
-                    params.put("p4", "6a6f20e5ec6b44ceb2cbb8a0586ea170");
+                    params.put("p4", "caf017a00ed745a09b14c5ed520f449b");
                     params.put("p5", userId);
-                    params.put("p6", "484577745");
+                    params.put("p6", "484629303");
                     params.put("p7", "928817042e334b46b5322d21277da205");
-                    params.put("p8", "ce8f81db64cc44f7ba6832b5bab64034");
-                    params.put("p9", "null");
-                    params.put("p10", "f4b21ca7cf954307b0d203c1166b5ced");
+                    params.put("p8", "c05153c7b7014bf4b0b9b4fbf961a633");
+                    params.put("p9", "5f03d13ddbbf43d4b3b8ecea08ab2933");
+                    params.put("p10", "21e17da7fcdc406d804904b722b44088");
 
                     String str1 = ValidateUtils.a(localHashMap, "asc");
                     String mac = "";
@@ -183,7 +185,8 @@ public class ShowActivity extends Activity {
                     Map<String, String> logParams = new HashMap<String, String>();
                     logParams.put("userName", userId);
                     logParams.put("productName", "0143000005749");
-                    MyRunnable runner = new MyRunnable(context, data_handler, urlStr, params, logParams);
+                    logParams.put("type", QIANG_TYPE);
+                    MyRunnable runner = new MyRunnable(context, data_handler, params, logParams);
                     exec.execute(runner);
                 }
             }

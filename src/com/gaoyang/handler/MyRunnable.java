@@ -12,15 +12,13 @@ import com.gaoyang.utils.HttpUtils;
 public class MyRunnable implements Runnable {
 	
 	private Context context;
-	private String requestUrl;
 	private Handler data_handler;
 	private Map<String, String> params = null;
 	private Map<String, String> logParams = null;
 
-	public MyRunnable(Context context, Handler data_handler ,String requestUrl, Map<String, String> params, Map<String, String> logParams) {
+	public MyRunnable(Context context, Handler data_handler, Map<String, String> params, Map<String, String> logParams) {
 		super();
 		this.context = context;
-		this.requestUrl = requestUrl;
 		this.params = params;
 		this.data_handler = data_handler;
 		this.logParams = logParams;
@@ -45,12 +43,17 @@ public class MyRunnable implements Runnable {
 				Message msg = Message.obtain();
 				msg.what = 1;
 				try{
-//					String returnUrl = postZSYHNew();
-					//老活动
-					String returnUrl = postZSYH();
+                    String returnUrl = "";
+                    int sleepTime = 10;
+                    if (logParams.get("type").equals("1") || logParams.get("type").equals("2")) {
+                        returnUrl = postZSYHNew();
+                    } else if (logParams.get("type").equals("3")) {
+                        returnUrl = postZSYH();
+                        sleepTime = 1000;
+                    }
 					String str = "用户名:" + logParams.get("userName") + " 商品：" + logParams.get("productName") + " 返回参数：" + returnUrl;
 					msg.obj = str;
-					Thread.sleep(1000);
+					Thread.sleep(sleepTime);
 				}catch(Exception ex){
 					msg.what = 0 ;
 					msg.obj = ex.getMessage();
