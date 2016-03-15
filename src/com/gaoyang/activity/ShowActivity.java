@@ -39,7 +39,7 @@ public class ShowActivity extends Activity {
     boolean flag = true;
 
     //1 九积分 2 周三五折 3 老活动
-    String QIANG_TYPE = "3";
+    String QIANG_TYPE = "1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,17 +109,17 @@ public class ShowActivity extends Activity {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
                     params.put("p1", "39");
                     params.put("body", "{\"isCanRush\":\"1\",\"payType\":\"1111\",\"labelId\":\"01\",\"productNo\":\"" + productArray[j].split("-")[1] + "\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"" + productArray[j].split("-")[2] + "\"}");
-                    params.put("p6", "483942674");
+                    params.put("p6", "484991758");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "AB316C39-E6F1-42D6-B84C-1D3D81AB5B2D");
-                    params.put("p4", "9B4B634C-1C27-4466-AC38-0858B1C674D2");
-                    params.put("p9", "83608d17bdf54f49a9a10188d51722f8");
+                    params.put("p8", "E878E3F6-8A45-483A-958F-081A8E07327E");
+                    params.put("p4", "CBE9ABC8-8892-4D35-B7B2-B1EB15AB6B9B");
+                    params.put("p9", "99db435201bb4b459736ac4c9642ee1d");
                     params.put("p0", "i");
-                    params.put("p10", "1526957E-EE15-4A11-8B00-1CB483CE6F21");
+                    params.put("p10", "234EDB8C-DC63-4C35-BA1F-5CB5E8F8FAC4");
                     params.put("p5", userId);
-                    params.put("syshead", "{\"trans_code\":\"SI_ORD0001\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"83608d17bdf54f49a9a10188d51722f8\"}");
+                    params.put("syshead", "{\"trans_code\":\"SI_ORD0001\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"99db435201bb4b459736ac4c9642ee1d\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
                     Map<String, String> logParams = new HashMap<String, String>();
                     logParams.put("userName", userArray[i]);
