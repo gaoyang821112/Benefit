@@ -52,6 +52,7 @@ public class ShowActivity extends Activity {
         Intent intent = getIntent();
         String[] userArray = intent.getStringExtra("userStr").substring(0,intent.getStringExtra("userStr").length() - 1).split(",");
         String[] productArray = intent.getStringExtra("productStr").substring(0,intent.getStringExtra("productStr").length() - 1).split(",");
+        String session_id = intent.getStringExtra("session_id");
 
         button = (Button) this.findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
@@ -109,17 +110,17 @@ public class ShowActivity extends Activity {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
                     params.put("p1", "39");
                     params.put("body", "{\"isCanRush\":\"1\",\"payType\":\"1111\",\"labelId\":\"01\",\"productNo\":\"" + productArray[j].split("-")[1] + "\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"" + productArray[j].split("-")[2] + "\"}");
-                    params.put("p6", "484991758");
+                    params.put("p6", "485004892");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "E878E3F6-8A45-483A-958F-081A8E07327E");
-                    params.put("p4", "CBE9ABC8-8892-4D35-B7B2-B1EB15AB6B9B");
-                    params.put("p9", "99db435201bb4b459736ac4c9642ee1d");
+                    params.put("p8", "B7180286-327A-4A08-8762-256332C66DF4");
+                    params.put("p4", "E543A71F-BDEF-4C37-A4AA-78B1C0B7FEC2");
+                    params.put("p9", session_id);
                     params.put("p0", "i");
-                    params.put("p10", "234EDB8C-DC63-4C35-BA1F-5CB5E8F8FAC4");
+                    params.put("p10", "4CDC9C9A-54BC-4AE3-B2BF-FC26757B0FAF");
                     params.put("p5", userId);
-                    params.put("syshead", "{\"trans_code\":\"SI_ORD0001\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"99db435201bb4b459736ac4c9642ee1d\"}");
+                    params.put("syshead", "{\"trans_code\":\"SI_ORD0001\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"" + session_id + "\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
                     Map<String, String> logParams = new HashMap<String, String>();
                     logParams.put("userName", userArray[i]);
@@ -131,17 +132,17 @@ public class ShowActivity extends Activity {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
                     params.put("p1", "37");
                     params.put("body", "{\"isCanRush\":\"0\",\"payType\":\"1000\",\"labelId\":\"01\",\"productNo\":\"2016011817094\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"201601181709400006\"}");
-                    params.put("p6", "481416200");
+                    params.put("p6", "485004811");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "8E49C999-DF28-49E5-9173-A41FEF5B86D0");
-                    params.put("p4", "C9DCC9B2-38B9-4C28-878D-A27F8432BA0E");
-                    params.put("p9", "18d40a4510134c84a271fd7fd941e33c");
+                    params.put("p8", "CC5DE235-9927-4618-8CAC-E44AC96E1E10");
+                    params.put("p4", "9FDE5111-9D5C-4146-B7EE-01E17B00CFC1");
+                    params.put("p9", session_id);
                     params.put("p0", "i");
-                    params.put("p10", "EDBAB3CF-5111-4E5E-BD59-C92427CEFC61");
+                    params.put("p10", "F4DA41D9-35BF-451F-81AF-B436F02EAA7B");
                     params.put("p5", userId);
-                    params.put("syshead", "{\"trans_code\":\"SI_ORD0016\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"18d40a4510134c84a271fd7fd941e33c\"}");
+                    params.put("syshead", "{\"trans_code\":\"SI_ORD0016\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"" + session_id + "\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
                     Map<String, String> logParams = new HashMap<String, String>();
                     logParams.put("userName", userArray[i]);

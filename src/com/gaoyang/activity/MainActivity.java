@@ -46,6 +46,8 @@ public class MainActivity extends BaseActivity {
 													  		{"王悦", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "23e645508dde487c92069a231ff99d9f", "1351****5398"},
 													  		{"李成", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "1fa9b434100f45258ff4afc422a8a703", "1501****2836"}
 	};
+
+	String session_id = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -84,6 +86,7 @@ public class MainActivity extends BaseActivity {
 					Intent intent = new Intent(MainActivity.this, ShowActivity.class); 
 					intent.putExtra("userStr", userStr);
 					intent.putExtra("productStr", productStr);
+					intent.putExtra("session_id", session_id);
 					startActivity(intent);
 				}
 			}
@@ -164,8 +167,8 @@ public class MainActivity extends BaseActivity {
 		params.put("p10", "9D723935-D29E-454B-966B-9E2A5BADDBC3");
 		params.put("p5", "17A8AF7157CD46FBAC97188626CA08A0");
 		params.put("syshead", "{\"sessionId\":\"7a33ae01d478482c81f9003277f7c90e\",\"trans_code\":\"SI_PRD0002\",\"pageIndex\":1,\"pageSize\":10,\"chnlUserId\":\"17A8AF7157CD46FBAC97188626CA08A0\",\"chnlId\":\"01\"}");
-		String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
-		JSONObject obj = null;
+//		String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
+//		JSONObject obj = null;
 		int totalPage = 1;
 //		try {
 //			obj = new JSONObject(result);
@@ -191,9 +194,9 @@ public class MainActivity extends BaseActivity {
 				params1.put("syshead", "{\"sessionId\":\"7a33ae01d478482c81f9003277f7c90e\",\"trans_code\":\"SI_PRD0002\",\"pageIndex\":" + (i + 1) + ",\"pageSize\":10,\"chnlUserId\":\"17A8AF7157CD46FBAC97188626CA08A0\",\"chnlId\":\"01\"}");
 				
 				String pageResult = HttpUtils.postUrl4ZSYH(productUrl, params1, context);
-				JSONObject obj2 = new JSONObject(pageResult);;
-				JSONObject bodyObj2 = (JSONObject) obj2.get("body");
-				JSONArray rows = bodyObj2.getJSONArray("rows");
+				JSONObject obj = new JSONObject(pageResult);;
+				JSONObject bodyObj = (JSONObject) obj.get("body");
+				JSONArray rows = bodyObj.getJSONArray("rows");
 				
 //				JSONObject jsonObject = new JSONObject(result);
 //				JSONArray coupons = jsonObject.getJSONArray("coupons");
@@ -206,6 +209,9 @@ public class MainActivity extends BaseActivity {
 					checkboxList2.add(checkBox);
 					linearLayout.addView(checkBox, j);
 				}
+
+				JSONObject sysheadObj = (JSONObject) obj.get("syshead");
+				session_id = sysheadObj.getString("session_id");
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
