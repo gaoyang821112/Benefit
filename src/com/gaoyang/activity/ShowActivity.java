@@ -97,6 +97,10 @@ public class ShowActivity extends Activity {
                     urlStr = MainActivity.userArray[6][1];
                     userId = MainActivity.userArray[6][2];
                     userPhone = MainActivity.userArray[6][3];
+                } else if (userArray[i].equals("肖博士")) {
+                    urlStr = MainActivity.userArray[7][1];
+                    userId = MainActivity.userArray[7][2];
+                    userPhone = MainActivity.userArray[7][3];
                 }
                 Map<String, String> params = new HashMap<String, String>();
 
