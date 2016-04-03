@@ -97,7 +97,7 @@ public class ShowActivity extends Activity {
                     urlStr = MainActivity.userArray[6][1];
                     userId = MainActivity.userArray[6][2];
                     userPhone = MainActivity.userArray[6][3];
-                } else if (userArray[i].equals("肖博士")) {
+                } else if (userArray[i].equals("张伟")) {
                     urlStr = MainActivity.userArray[7][1];
                     userId = MainActivity.userArray[7][2];
                     userPhone = MainActivity.userArray[7][3];
@@ -114,15 +114,15 @@ public class ShowActivity extends Activity {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
                     params.put("p1", "39");
                     params.put("body", "{\"isCanRush\":\"1\",\"payType\":\"1111\",\"labelId\":\"01\",\"productNo\":\"" + productArray[j].split("-")[1] + "\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"" + productArray[j].split("-")[2] + "\"}");
-                    params.put("p6", "485004892");
+                    params.put("p6", "486636627");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "B7180286-327A-4A08-8762-256332C66DF4");
-                    params.put("p4", "E543A71F-BDEF-4C37-A4AA-78B1C0B7FEC2");
+                    params.put("p8", "4B4E6622-05B0-426B-A6F6-10AA46144D3E");
+                    params.put("p4", "45FB6947-1058-4DE8-8BA7-1FDA7D91302A");
                     params.put("p9", session_id);
                     params.put("p0", "i");
-                    params.put("p10", "4CDC9C9A-54BC-4AE3-B2BF-FC26757B0FAF");
+                    params.put("p10", "7CE31AB6-24F0-4B31-91E1-C9BDA14DBB1C");
                     params.put("p5", userId);
                     params.put("syshead", "{\"trans_code\":\"SI_ORD0001\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"" + session_id + "\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
@@ -136,7 +136,7 @@ public class ShowActivity extends Activity {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
                     params.put("p1", "37");
                     params.put("body", "{\"isCanRush\":\"0\",\"payType\":\"1000\",\"labelId\":\"01\",\"productNo\":\"2016011817094\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"201601181709400006\"}");
-                    params.put("p6", "485004811");
+                    params.put("p6", "486098134");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");

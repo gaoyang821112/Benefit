@@ -37,7 +37,9 @@ public class MainActivity extends BaseActivity {
 	
 	private Button button;
 
-	private String city = "21";
+	private String city = "10";
+
+	String session_id = "0b551eb1c73d4e8dbda8806a7b451e1a";
 	
 	public static String[][] userArray = new String[][]{
 															{"高洋", "?p0=a&p1=35&p2=f59b4efef5454bb18561c4dde7974c67&p3=522e29c023924b379e53df1bf555587c8&p4=8013b5f1ae704ce3a20075dcea7ded58&p5=17A8AF7157CD46FBAC97188626CA08A0&p6=477725532&p7=928817042e334b46b5322d21277da205&p8=bfcff26b5b294170b6bfa7cf31f2369b&p9=09642418d500463a9fd4f2f9eab03cbf&p10=018744f4a94c435099095ba6132d02b4", "17A8AF7157CD46FBAC97188626CA08A0", "186****2346"},
@@ -47,10 +49,10 @@ public class MainActivity extends BaseActivity {
 													  		{"王鹏", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "03570d38aab14714831b62a132fd61e2", "1369****3985"},
 													  		{"王悦", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "23e645508dde487c92069a231ff99d9f", "1351****5398"},
 													  		{"李成", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "1fa9b434100f45258ff4afc422a8a703", "1501****2836"},
+															{"张伟", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "d1ad7c70c25e42458cd87ce5abe9aeaf", "1381****0985"},
 															{"肖博士", "?p0=a&p1=33&p2=31b9f8a69297433aa0019f96d1ae0600&p3=ad51484ff3d04d28b35c7ba54cf8b352d&p4=97c7116e34dd479494e6ea87e98e8cc1&p5=03570d38aab14714831b62a132fd61e2&p6=475586395&p7=61d8cd34bf584448a05c745b8f390d47&p8=c0fe0f3441964ec39c5365898677b47e&p9=&p10=1f912c0f778741489fe32942c798afc3", "c8d23e4a0fec4575a96ca09bd0670f83", "1852****2288"}
 	};
 
-	String session_id = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -165,11 +167,11 @@ public class MainActivity extends BaseActivity {
 		params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
 		params.put("p8", "C9A1B46D-58A5-46F8-83BC-46A928F75405");
 		params.put("p4", "FB42BA36-C292-472C-B608-FCC55F9E62BE");
-		params.put("p9", "7a33ae01d478482c81f9003277f7c90e");
+		params.put("p9", session_id);
 		params.put("p0", "i");
 		params.put("p10", "9D723935-D29E-454B-966B-9E2A5BADDBC3");
 		params.put("p5", "17A8AF7157CD46FBAC97188626CA08A0");
-		params.put("syshead", "{\"sessionId\":\"7a33ae01d478482c81f9003277f7c90e\",\"trans_code\":\"SI_PRD0002\",\"pageIndex\":1,\"pageSize\":10,\"chnlUserId\":\"17A8AF7157CD46FBAC97188626CA08A0\",\"chnlId\":\"01\"}");
+		params.put("syshead", "{\"sessionId\":\"\" + session_id + \"\",\"trans_code\":\"SI_PRD0002\",\"pageIndex\":1,\"pageSize\":10,\"chnlUserId\":\"17A8AF7157CD46FBAC97188626CA08A0\",\"chnlId\":\"01\"}");
 //		String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
 //		JSONObject obj = null;
 		int totalPage = 1;
@@ -190,11 +192,11 @@ public class MainActivity extends BaseActivity {
 				params1.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
 				params1.put("p8", "C9A1B46D-58A5-46F8-83BC-46A928F75405");
 				params1.put("p4", "FB42BA36-C292-472C-B608-FCC55F9E62BE");
-				params1.put("p9", "7a33ae01d478482c81f9003277f7c90e");
+				params1.put("p9", session_id);
 				params1.put("p0", "i");
 				params1.put("p10", "9D723935-D29E-454B-966B-9E2A5BADDBC3");
 				params1.put("p5", "17A8AF7157CD46FBAC97188626CA08A0");
-				params1.put("syshead", "{\"sessionId\":\"7a33ae01d478482c81f9003277f7c90e\",\"trans_code\":\"SI_PRD0002\",\"pageIndex\":" + (i + 1) + ",\"pageSize\":10,\"chnlUserId\":\"17A8AF7157CD46FBAC97188626CA08A0\",\"chnlId\":\"01\"}");
+				params1.put("syshead", "{\"sessionId\":\"" + session_id + "\",\"trans_code\":\"SI_PRD0002\",\"pageIndex\":" + (i + 1) + ",\"pageSize\":10,\"chnlUserId\":\"17A8AF7157CD46FBAC97188626CA08A0\",\"chnlId\":\"01\"}");
 				
 				String pageResult = HttpUtils.postUrl4ZSYH(productUrl, params1, context);
 				JSONObject obj = new JSONObject(pageResult);;
