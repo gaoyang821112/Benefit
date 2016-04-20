@@ -140,15 +140,15 @@ public class ShowActivity extends Activity {
                     //西提牛排 bakNo=201603313058900001 productNo=2016033130589
                     //新石器烤肉 productNo=2016033030145 productNo=2016033030019
                     params.put("body", "{\"isCanRush\":\"0\",\"payType\":\"1000\",\"labelId\":\"01\",\"productNo\":\"2016032929714\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"201603292971400001\"}");
-                    params.put("p6", "488038568");
+                    params.put("p6", "488067564");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "B436E251-1A03-4E66-AC79-ABAAF1610CD2");
-                    params.put("p4", "F94BEA24-7176-4FC1-B313-ECECB7C02388");
+                    params.put("p8", "6C703717-BFC1-4123-92A0-C18188EEA9C3");
+                    params.put("p4", "32E65581-F461-42E5-A07F-CAB2C0F91E20");
                     params.put("p9", session_id);
                     params.put("p0", "i");
-                    params.put("p10", "5D31D2CD-7650-4F3B-8BA4-22F950459A97");
+                    params.put("p10", "F319F3F9-B9B7-4144-9357-96CECC294EAF");
                     params.put("p5", userId);
                     params.put("syshead", "{\"trans_code\":\"SI_ORD0016\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"" + session_id + "\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
