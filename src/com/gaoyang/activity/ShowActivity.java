@@ -112,17 +112,17 @@ public class ShowActivity extends Activity {
                 if (QIANG_TYPE.equals("1")) {
                     //九积分参数
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
-                    params.put("p1", "39");
+                    params.put("p1", "40");
                     params.put("body", "{\"isCanRush\":\"1\",\"payType\":\"1111\",\"labelId\":\"01\",\"productNo\":\"" + productArray[j].split("-")[1] + "\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"" + productArray[j].split("-")[2] + "\"}");
-                    params.put("p6", "486636627");
+                    params.put("p6", "489882658");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "4B4E6622-05B0-426B-A6F6-10AA46144D3E");
-                    params.put("p4", "45FB6947-1058-4DE8-8BA7-1FDA7D91302A");
+                    params.put("p8", "81A43EEF-DECB-47E7-9390-680FA8757563");
+                    params.put("p4", "A69ED7FD-B690-4D95-A519-99D3B5514D6F");
                     params.put("p9", session_id);
                     params.put("p0", "i");
-                    params.put("p10", "7CE31AB6-24F0-4B31-91E1-C9BDA14DBB1C");
+                    params.put("p10", "97BEAE31-E21B-42E1-A910-30DD9F5410A0");
                     params.put("p5", userId);
                     params.put("syshead", "{\"trans_code\":\"SI_ORD0001\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"" + session_id + "\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
@@ -135,20 +135,21 @@ public class ShowActivity extends Activity {
                 } else if (QIANG_TYPE.equals("2")) {
                     String productUrl = API_URL.ZSYH_ADDRESS2 + API_URL.ZSYH.PRODUCT_9POINT_LIST_URL2;
                     params.put("p1", "40");
-                    //哈根达斯 bakNo=201603303014500001 productNo=2016033030145
-                    //星巴克
-                    //西提牛排 bakNo=201603313058900001 productNo=2016033130589
-                    //新石器烤肉 productNo=2016033030145 productNo=2016033030019
-                    params.put("body", "{\"isCanRush\":\"0\",\"payType\":\"1000\",\"labelId\":\"01\",\"productNo\":\"2016032929714\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"201603292971400001\"}");
-                    params.put("p6", "488067564");
+                    //哈根达斯 bakNo=201604273654500001 productNo=2016042736545
+                    //星巴克  bakNo=201604283739600005 productNo=2016042837396
+                    //南京 bakNo=201604263598500001 productNo=2016042635985
+                    //西提牛排 bakNo=201604273650000001 productNo=2016042736500
+                    //新石器烤肉 bakNo=201604253560100002 productNo=2016042535601
+                    params.put("body", "{\"isCanRush\":\"0\",\"payType\":\"1000\",\"labelId\":\"01\",\"productNo\":\"2016042736545\",\"moduleType\":\"1\",\"accountNum\":1,\"mobilePhone\":\"" + userPhone + "\",\"bakNo\":\"201604273654500001\"}");
+                    params.put("p6", "489882658");
                     params.put("p2", "appStore");
                     params.put("p7", "C7C5BC31E5544437BE1D43CF7F735627");
                     params.put("p3", "22FCB3CBBC534C61B4775AD4740DB4E7f");
-                    params.put("p8", "6C703717-BFC1-4123-92A0-C18188EEA9C3");
-                    params.put("p4", "32E65581-F461-42E5-A07F-CAB2C0F91E20");
+                    params.put("p8", "81A43EEF-DECB-47E7-9390-680FA8757563");
+                    params.put("p4", "A69ED7FD-B690-4D95-A519-99D3B5514D6F");
                     params.put("p9", session_id);
                     params.put("p0", "i");
-                    params.put("p10", "F319F3F9-B9B7-4144-9357-96CECC294EAF");
+                    params.put("p10", "97BEAE31-E21B-42E1-A910-30DD9F5410A0");
                     params.put("p5", userId);
                     params.put("syshead", "{\"trans_code\":\"SI_ORD0016\",\"chnlId\":\"01\",\"chnlUserId\":\"" + userId + "\",\"sessionId\":\"" + session_id + "\"}");
 //					String result = HttpUtils.postUrl4ZSYH(productUrl, params, context);
